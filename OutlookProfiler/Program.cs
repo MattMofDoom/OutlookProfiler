@@ -175,8 +175,8 @@ namespace OutlookProfiler
                                 operation = OperationType.Export2013;
                             else if (arg.StartsWith("export2016", StringComparison.CurrentCultureIgnoreCase))
                                 operation = OperationType.Export2016;
-                            else if (arg.StartsWith("export", StringComparison.CurrentCultureIgnoreCase))
-                                operation = OperationType.Export;
+                            else if (arg.StartsWith("export2010", StringComparison.CurrentCultureIgnoreCase))
+                                operation = OperationType.Export2010;
                             else
                                 operation = OperationType.Import;
                             path = argPath[1];
@@ -243,7 +243,7 @@ namespace OutlookProfiler
 
             switch (operation)
             {
-                case OperationType.Export:
+                case OperationType.Export2010:
                 case OperationType.Export2013:
                 case OperationType.Export2016:
                     try
@@ -467,7 +467,7 @@ namespace OutlookProfiler
                 default:
                     Console.WriteLine();
                     Console.WriteLine(
-                        "USAGE: OutlookProfiler Export={FilePath} [Options={OptionsFilePath}] [TargetProfile ={ProfileName}] [SourceProfile={ProfileName}] [TargetVersion=2013|2016] [Log={LogPath}] [IgnoreDefault]");
+                        "USAGE: OutlookProfiler Export2010={FilePath} [Options={OptionsFilePath}] [TargetProfile ={ProfileName}] [SourceProfile={ProfileName}] [TargetVersion=2013|2016] [Log={LogPath}] [IgnoreDefault]");
                     Console.WriteLine(
                         "       OutlookProfiler Export2013 ={FilePath} [Options={OptionsFilePath}] [TargetProfile ={ProfileName}] [SourceProfile={ProfileName}] [TargetVersion=2013|2016] [Log={LogPath}] [IgnoreDefault]");
                     Console.WriteLine(
@@ -483,7 +483,7 @@ namespace OutlookProfiler
 
         private enum OperationType
         {
-            Export,
+            Export2010,
             Export2013,
             Export2016,
             Import,
