@@ -85,4 +85,9 @@
   <ItemGroup>
     <PackageReference Include="regis3.dll" Version="1.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="custom16.prf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
